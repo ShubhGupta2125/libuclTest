@@ -1,0 +1,869 @@
+  2800 ktrace   RET   ktrace 0
+  2800 ktrace   CALL  execve(0xffbfedbb,0xffbfec80,0xffbfec90)
+  2800 ktrace   NAMI  "./capsh"
+  2800 ktrace   NAMI  "/libexec/ld-elf.so.1"
+  2800 capsh    RET   execve JUSTRETURN
+  2800 capsh    CALL  mmap(0,0x20000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 671617024/0x28081000
+  2800 capsh    CALL  issetugid
+  2800 capsh    RET   issetugid 0
+  2800 capsh    CALL  __sysctl(0xffbfe194,0x2,0x2807fac8,0xffbfe19c,0,0)
+  2800 capsh    SCTL  "kern.ostype"
+  2800 capsh    RET   __sysctl 0
+  2800 capsh    CALL  __sysctl(0xffbfe194,0x2,0x2807fbc8,0xffbfe19c,0,0)
+  2800 capsh    SCTL  "kern.hostname"
+  2800 capsh    RET   __sysctl 0
+  2800 capsh    CALL  __sysctl(0xffbfe194,0x2,0x2807fcc8,0xffbfe19c,0,0)
+  2800 capsh    SCTL  "kern.osrelease"
+  2800 capsh    RET   __sysctl 0
+  2800 capsh    CALL  __sysctl(0xffbfe194,0x2,0x2807fdc8,0xffbfe19c,0,0)
+  2800 capsh    SCTL  "kern.version"
+  2800 capsh    RET   __sysctl 0
+  2800 capsh    CALL  __sysctl(0xffbfe194,0x2,0x2807fec8,0xffbfe19c,0,0)
+  2800 capsh    SCTL  "hw.machine"
+  2800 capsh    RET   __sysctl 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x2807b9aa,0x100000<O_RDONLY|O_CLOEXEC>)
+  2800 capsh    NAMI  "/etc/libmap.conf"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfe0f8)
+  2800 capsh    STRU  struct stat {dev=77, ino=1043406, mode=0100644, nlink=1, uid=0, gid=0, rdev=2095653, atime=1530915426.859305000, mtime=1526327509, ctime=1526904252.533089000, birthtime=1526327509, size=102, blksize=32768, blocks=8, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  read(0x3,0x28083180,0x66)
+  2800 capsh    GIO   fd 3 read 102 bytes
+       "# $FreeBSD: head/etc/libmap.conf 253853 2013-08-01 05:50:42Z jlh $
+	includedir /usr/local/etc/libmap.d
+       "
+  2800 capsh    RET   read 102/0x66
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  open(0xffbfdca6,0x120004<O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC>)
+  2800 capsh    NAMI  "/usr/local/etc/libmap.d"
+  2800 capsh    RET   open -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/local/lib/libpreopen.so"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfdcf0)
+  2800 capsh    STRU  struct stat {dev=77, ino=678825, mode=0100755, nlink=1, uid=0, gid=0, rdev=1570288, atime=1530912685.043786000, mtime=1530912254.185637000, ctime=1530912254.185637000, birthtime=1530911906.127993000, size=37989, blksize=32768, blocks=80, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  mmap(0,0x4000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 671752192/0x280a2000
+  2800 capsh    CALL  mmap(0x280a2000,0x3000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671752192/0x280a2000
+  2800 capsh    CALL  mmap(0x280a5000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0x3,0x2000,0)
+  2800 capsh    RET   mmap 671764480/0x280a5000
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/local/lib/libc++.so.1"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x2807b991,0x100000<O_RDONLY|O_CLOEXEC>)
+  2800 capsh    NAMI  "/var/run/ld-elf.so.hints"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  read(0x3,0x2807ffd8,0x80)
+  2800 capsh    GIO   fd 3 read 128 bytes
+       0x0000 4568 6e74 0100 0000 8000 0000 9200 0000 0000 0000 9100 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000  |Ehnt..................................................|
+       0x0036 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000  |......................................................|
+       0x006c 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000                                                                                       |....................|
+
+  2800 capsh    RET   read 128/0x80
+  2800 capsh    CALL  fstat(0x3,0xffbfd2a8)
+  2800 capsh    STRU  struct stat {dev=77, ino=493686, mode=0100444, nlink=1, uid=0, gid=0, rdev=987200, atime=1530915426.903022000, mtime=1530894202.859946000, ctime=1530894202.860112000, birthtime=1530894202.859569000, size=274, blksize=32768, blocks=8, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  pread(0x3,0x28088000,0x92,0x80,0)
+  2800 capsh    GIO   fd 3 read 146 bytes
+       "/lib:/usr/lib:/usr/lib/compat:/usr/local/lib:/usr/local/lib/graphviz:/usr/local/lib/nss:/usr/local/lib/perl5/5.26/mach/CORE:/usr/local/llvm60/lib\0"
+  2800 capsh    RET   pread 146/0x92
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/lib/libc++.so.1"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/lib/libc++.so.1"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfdcf0)
+  2800 capsh    STRU  struct stat {dev=77, ino=404990, mode=0100444, nlink=1, uid=0, gid=0, rdev=928864, atime=1530912685.034218000, mtime=1526327165, ctime=1526904262.935083000, birthtime=1526327165, size=787944, blksize=32768, blocks=1664, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  mmap(0,0xc3000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 671768576/0x280a6000
+  2800 capsh    CALL  mmap(0x280a6000,0xbe000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671768576/0x280a6000
+  2800 capsh    CALL  mmap(0x28164000,0x3000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0x3,0xbd000,0)
+  2800 capsh    RET   mmap 672546816/0x28164000
+  2800 capsh    CALL  mmap(0x28167000,0x2000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 672559104/0x28167000
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/local/lib/libcxxrt.so.1"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/lib/libcxxrt.so.1"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfdcf0)
+  2800 capsh    STRU  struct stat {dev=77, ino=722353, mode=0100444, nlink=1, uid=0, gid=0, rdev=1456608, atime=1530912685.034509000, mtime=1526327165, ctime=1526904269.339963000, birthtime=1526327165, size=91540, blksize=32768, blocks=184, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  mmap(0,0x1b000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 672567296/0x28169000
+  2800 capsh    CALL  mmap(0x28169000,0x16000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 672567296/0x28169000
+  2800 capsh    CALL  mmap(0x2817f000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0x3,0x15000,0)
+  2800 capsh    RET   mmap 672657408/0x2817f000
+  2800 capsh    CALL  mmap(0x28180000,0x4000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 672661504/0x28180000
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/local/lib/libm.so.5"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/lib/libm.so.5"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfdcf0)
+  2800 capsh    STRU  struct stat {dev=77, ino=722342, mode=0100444, nlink=1, uid=0, gid=0, rdev=1455936, atime=1530914476.977284000, mtime=1526327170, ctime=1526904269.266387000, birthtime=1526327170, size=193180, blksize=32768, blocks=384, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  mmap(0,0x2c000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 672677888/0x28184000
+  2800 capsh    CALL  mmap(0x28184000,0x2b000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 672677888/0x28184000
+  2800 capsh    CALL  mmap(0x281af000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0x3,0x2a000,0)
+  2800 capsh    RET   mmap 672854016/0x281af000
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/local/lib/libgcc_s.so.1"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/lib/libgcc_s.so.1"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfdcf0)
+  2800 capsh    STRU  struct stat {dev=77, ino=722325, mode=0100444, nlink=1, uid=0, gid=0, rdev=1455152, atime=1530912685.035009000, mtime=1526327276, ctime=1526904269.181410000, birthtime=1526327276, size=81792, blksize=32768, blocks=160, flags=0x0 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  mmap(0,0x15000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 672858112/0x281b0000
+  2800 capsh    CALL  mmap(0x281b0000,0x14000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 672858112/0x281b0000
+  2800 capsh    CALL  mmap(0x281c4000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0x3,0x13000,0)
+  2800 capsh    RET   mmap 672940032/0x281c4000
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/usr/local/lib/libc.so.7"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x28086000,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 capsh    NAMI  "/lib/libc.so.7"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  fstat(0x3,0xffbfdcf0)
+  2800 capsh    STRU  struct stat {dev=77, ino=722343, mode=0100444, nlink=1, uid=0, gid=0, rdev=1455984, atime=1530915426.860106000, mtime=1526327133.202934000, ctime=1526904269.403097000, birthtime=1526327133.202934000, size=1756736, blksize=32768, blocks=3520, flags=0x20000 }
+  2800 capsh    RET   fstat 0
+  2800 capsh    CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  mmap(0,0x1bf000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 672944128/0x281c5000
+  2800 capsh    CALL  mmap(0x281c5000,0x197000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0x3,0,0)
+  2800 capsh    RET   mmap 672944128/0x281c5000
+  2800 capsh    CALL  mmap(0x2835c000,0x9000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0x3,0x196000,0)
+  2800 capsh    RET   mmap 674611200/0x2835c000
+  2800 capsh    CALL  mmap(0x28365000,0x1f000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674648064/0x28365000
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  close(0x3)
+  2800 capsh    RET   close 0
+  2800 capsh    CALL  sysarch(I386_SET_GSBASE,0xffbfe1dc)
+  2800 capsh    RET   sysarch 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfe1b0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  readlink(0x28350b86,0xffbfd92f,0x400)
+  2800 capsh    NAMI  "/etc/malloc.conf"
+  2800 capsh    RET   readlink -1 errno 2 No such file or directory
+  2800 capsh    CALL  issetugid
+  2800 capsh    RET   issetugid 0
+  2800 capsh    CALL  __sysctl(0xffbfd8c8,0x2,0xffbfd8c4,0xffbfd8c0,0,0)
+  2800 capsh    SCTL  "vm.overcommit"
+  2800 capsh    RET   __sysctl 0
+  2800 capsh    CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  madvise(0x280a1000,0x1000,MADV_FREE)
+  2800 capsh    RET   madvise 0
+  2800 capsh    CALL  munmap(0x280a1000,0x1000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  mmap(0,0x200000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674775040/0x28384000
+  2800 capsh    CALL  munmap(0x28384000,0x200000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  mmap(0,0x3ff000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674775040/0x28384000
+  2800 capsh    CALL  munmap(0x28384000,0x7c000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  munmap(0x28600000,0x183000)
+  2800 capsh    RET   munmap 0
+  2800 capsh    CALL  mmap(0,0x7000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674775040/0x28384000
+  2800 capsh    CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 671748096/0x280a1000
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_BLOCK,0x280800a0,0xffbfdd50)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  sigprocmask(SIG_SETMASK,0x280800b4,0)
+  2800 capsh    RET   sigprocmask 0
+  2800 capsh    CALL  mmap(0,0x5000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674803712/0x2838b000
+  2800 capsh    CALL  openat(AT_FDCWD,0xffbfdf19,0<O_RDONLY>)
+  2800 capsh    NAMI  "/sbin"
+  2800 capsh    RET   openat 3
+  2800 capsh    CALL  openat(AT_FDCWD,0xffbfdf19,0<O_RDONLY>)
+  2800 capsh    NAMI  "/bin"
+  2800 capsh    RET   openat 4
+  2800 capsh    CALL  openat(AT_FDCWD,0xffbfdf19,0<O_RDONLY>)
+  2800 capsh    NAMI  "/usr/sbin"
+  2800 capsh    RET   openat 5
+  2800 capsh    CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674824192/0x28390000
+  2800 capsh    CALL  openat(AT_FDCWD,0xffbfdf19,0<O_RDONLY>)
+  2800 capsh    NAMI  "/usr/bin"
+  2800 capsh    RET   openat 6
+  2800 capsh    CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674828288/0x28391000
+  2800 capsh    CALL  openat(AT_FDCWD,0x28391000,0<O_RDONLY>)
+  2800 capsh    NAMI  "/usr/local/sbin"
+  2800 capsh    RET   openat 7
+  2800 capsh    CALL  openat(AT_FDCWD,0x28391000,0<O_RDONLY>)
+  2800 capsh    NAMI  "/usr/local/bin"
+  2800 capsh    RET   openat 8
+  2800 capsh    CALL  openat(AT_FDCWD,0x28391000,0<O_RDONLY>)
+  2800 capsh    NAMI  "/home/shubh/bin"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x805fc4a,0<O_RDONLY>)
+  2800 capsh    NAMI  "/libexec/ld-elf.so.1"
+  2800 capsh    RET   openat 9
+  2800 capsh    CALL  openat(AT_FDCWD,0x805fc63,0<O_RDONLY>)
+  2800 capsh    NAMI  "/libexec/ld-elf32.so.1"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(AT_FDCWD,0x805fcd8,0<O_RDONLY>)
+  2800 capsh    NAMI  "/lib"
+  2800 capsh    RET   openat 10/0xa
+  2800 capsh    CALL  openat(AT_FDCWD,0x805fcc5,0<O_RDONLY>)
+  2800 capsh    NAMI  "/usr/lib"
+  2800 capsh    RET   openat 11/0xb
+  2800 capsh    CALL  openat(AT_FDCWD,0x805fcce,0<O_RDONLY>)
+  2800 capsh    NAMI  "/usr/local/lib"
+  2800 capsh    RET   openat 12/0xc
+  2800 capsh    CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674832384/0x28392000
+  2800 capsh    CALL  mmap(0,0x7000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674836480/0x28393000
+  2800 capsh    CALL  openat(AT_FDCWD,0xffbfed8c,0<O_RDONLY>)
+  2800 capsh    NAMI  "telnet"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(0x3,0xffbfed8c,0<O_RDONLY>)
+  2800 capsh    NAMI  "telnet"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(0x4,0xffbfed8c,0<O_RDONLY>)
+  2800 capsh    NAMI  "telnet"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(0x5,0xffbfed8c,0<O_RDONLY>)
+  2800 capsh    NAMI  "telnet"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  openat(0x6,0xffbfed8c,0<O_RDONLY>)
+  2800 capsh    NAMI  "telnet"
+  2800 capsh    RET   openat 13/0xd
+  2800 capsh    CALL  openat(AT_FDCWD,0xffbfed93,0<O_RDONLY>)
+  2800 capsh    NAMI  "localhost"
+  2800 capsh    RET   openat -1 errno 2 No such file or directory
+  2800 capsh    CALL  cap_enter
+  2800 capsh    RET   cap_enter 0
+  2800 capsh    CALL  mmap(0,0x3000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674865152/0x2839a000
+  2800 capsh    CALL  mmap(0,0x3000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674877440/0x2839d000
+  2800 capsh    CALL  mmap(0,0x3000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674889728/0x283a0000
+  2800 capsh    CALL  mmap(0,0x5000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 capsh    RET   mmap 674902016/0x283a3000
+  2800 capsh    CALL  shm_open(0x1,0x202<O_RDWR|O_CREAT>,0600<S_IRUSR|S_IWUSR>)
+  2800 capsh    RET   shm_open 14/0xe
+  2800 capsh    CALL  ftruncate(0xe,0x8)
+  2800 capsh    RET   ftruncate 0
+  2800 capsh    CALL  mmap(0,0x8,0x3<PROT_READ|PROT_WRITE>,0x1<MAP_SHARED>,0xe,0,0)
+  2800 capsh    RET   mmap 674922496/0x283a8000
+  2800 capsh    CALL  fcntl(0xe,F_SETFD,0)
+  2800 capsh    RET   fcntl 0
+  2800 capsh    CALL  fexecve(0x9,0x28391020,0x283a3000)
+  2800 ld-elf.so.1 RET   fexecve JUSTRETURN
+  2800 ld-elf.so.1 CALL  mmap(0,0x20000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 553771008/0x2101e000
+  2800 ld-elf.so.1 CALL  issetugid
+  2800 ld-elf.so.1 RET   issetugid 0
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfe2e8)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404159, mode=0100555, nlink=1, uid=0, gid=0, rdev=831408, atime=1530912685.043296000, mtime=1526327419, ctime=1526904253.406416000, birthtime=1526327419, size=124292, blksize=32768, blocks=248, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  geteuid
+  2800 ld-elf.so.1 RET   geteuid 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0x8048000,0x22000,0<PROT_NONE>,0x6010<MAP_FIXED|MAP_GUARD|MAP_EXCL>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 134512640/0x8048000
+  2800 ld-elf.so.1 CALL  mmap(0x8048000,0x1c000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 134512640/0x8048000
+  2800 ld-elf.so.1 CALL  mmap(0x8064000,0x3000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x1b000,0)
+  2800 ld-elf.so.1 RET   mmap 134627328/0x8064000
+  2800 ld-elf.so.1 CALL  mmap(0x8067000,0x3000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 134639616/0x8067000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(AT_FDCWD,0x101a9aa,0x100000<O_RDONLY|O_CLOEXEC>)
+  2800 ld-elf.so.1 CAP   restricted VFS lookup
+  2800 ld-elf.so.1 RET   openat -1 errno 94 Not permitted in capability mode
+  2800 ld-elf.so.1 CALL  openat(0xa,0xffbfed8e,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libpreopen.so"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0xffbfed8e,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libpreopen.so"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xc,0xffbfed8e,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libpreopen.so"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=678825, mode=0100755, nlink=1, uid=0, gid=0, rdev=1570288, atime=1530915426.902650000, mtime=1530912254.185637000, ctime=1530912254.185637000, birthtime=1530911906.127993000, size=37989, blksize=32768, blocks=80, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x4000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 553906176/0x2103f000
+  2800 ld-elf.so.1 CALL  mmap(0x2103f000,0x3000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553906176/0x2103f000
+  2800 ld-elf.so.1 CALL  mmap(0x21042000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x2000,0)
+  2800 ld-elf.so.1 RET   mmap 553918464/0x21042000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x8049191,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libncursesw.so.8"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=722317, mode=0100444, nlink=1, uid=0, gid=0, rdev=1454920, atime=1530915300.059318000, mtime=1526327187, ctime=1526904269.164468000, birthtime=1526327187, size=314144, blksize=32768, blocks=616, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x4e000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 553922560/0x21043000
+  2800 ld-elf.so.1 CALL  mmap(0x21043000,0x4b000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553922560/0x21043000
+  2800 ld-elf.so.1 CALL  mmap(0x2108e000,0x3000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x4a000,0)
+  2800 ld-elf.so.1 RET   mmap 554229760/0x2108e000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x80491c8,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libipsec.so.4"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=722328, mode=0100444, nlink=1, uid=0, gid=0, rdev=1455248, atime=1530912685.044211000, mtime=1526327210, ctime=1526904269.190669000, birthtime=1526327210, size=27060, blksize=32768, blocks=56, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x7000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 554242048/0x21091000
+  2800 ld-elf.so.1 CALL  mmap(0x21091000,0x6000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 554242048/0x21091000
+  2800 ld-elf.so.1 CALL  mmap(0x21097000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x6000,0)
+  2800 ld-elf.so.1 RET   mmap 554266624/0x21097000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x804920a,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libmp.so.7"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x804920a,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libmp.so.7"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404655, mode=0100444, nlink=1, uid=0, gid=0, rdev=897717, atime=1530912685.044374000, mtime=1526327278, ctime=1526904260.116243000, birthtime=1526327278, size=11484, blksize=32768, blocks=24, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x4000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 554270720/0x21098000
+  2800 ld-elf.so.1 CALL  mmap(0x21098000,0x3000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 554270720/0x21098000
+  2800 ld-elf.so.1 CALL  mmap(0x2109b000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x2000,0)
+  2800 ld-elf.so.1 RET   mmap 554283008/0x2109b000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x804925d,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libcrypto.so.8"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=722315, mode=0100444, nlink=1, uid=0, gid=0, rdev=1454448, atime=1530914493.495707000, mtime=1526327341, ctime=1526904269.130854000, birthtime=1526327341, size=1774300, blksize=32768, blocks=3584, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x1b4000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 554287104/0x2109c000
+  2800 ld-elf.so.1 CALL  mmap(0x2109c000,0x19b000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 554287104/0x2109c000
+  2800 ld-elf.so.1 CALL  mmap(0x21237000,0x17000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x19a000,0)
+  2800 ld-elf.so.1 RET   mmap 555970560/0x21237000
+  2800 ld-elf.so.1 CALL  mmap(0x2124e000,0x2000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 556064768/0x2124e000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x80492bc,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libpam.so.6"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x80492bc,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libpam.so.6"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=405086, mode=0100444, nlink=1, uid=0, gid=0, rdev=936336, atime=1530915300.061058000, mtime=1526327217, ctime=1526904263.593033000, birthtime=1526327217, size=43780, blksize=32768, blocks=88, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0xc000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 556072960/0x21250000
+  2800 ld-elf.so.1 CALL  mmap(0x21250000,0xb000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 556072960/0x21250000
+  2800 ld-elf.so.1 CALL  mmap(0x2125b000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0xa000,0)
+  2800 ld-elf.so.1 RET   mmap 556118016/0x2125b000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x8049305,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libkrb5.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x8049305,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libkrb5.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=405074, mode=0100444, nlink=1, uid=0, gid=0, rdev=935768, atime=1530912685.045243000, mtime=1526327319, ctime=1526904263.558994000, birthtime=1526327319, size=445020, blksize=32768, blocks=960, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x6d000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 556122112/0x2125c000
+  2800 ld-elf.so.1 CALL  mmap(0x2125c000,0x6a000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 556122112/0x2125c000
+  2800 ld-elf.so.1 CALL  mmap(0x212c6000,0x3000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x6a000,0)
+  2800 ld-elf.so.1 RET   mmap 556556288/0x212c6000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x80495c5,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libroken.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x80495c5,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libroken.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404788, mode=0100444, nlink=1, uid=0, gid=0, rdev=912960, atime=1530912685.045430000, mtime=1526327322, ctime=1526904261.488055000, birthtime=1526327322, size=64388, blksize=32768, blocks=128, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x10000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 556568576/0x212c9000
+  2800 ld-elf.so.1 CALL  mmap(0x212c9000,0xf000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 556568576/0x212c9000
+  2800 ld-elf.so.1 CALL  mmap(0x212d8000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0xf000,0)
+  2800 ld-elf.so.1 RET   mmap 556630016/0x212d8000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x80495db,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libc.so.7"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=722343, mode=0100444, nlink=1, uid=0, gid=0, rdev=1455984, atime=1530915426.934894000, mtime=1526327133.202934000, ctime=1526904269.403097000, birthtime=1526327133.202934000, size=1756736, blksize=32768, blocks=3520, flags=0x20000 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x1bf000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 556634112/0x212d9000
+  2800 ld-elf.so.1 CALL  mmap(0x212d9000,0x197000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 556634112/0x212d9000
+  2800 ld-elf.so.1 CALL  mmap(0x21470000,0x9000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x196000,0)
+  2800 ld-elf.so.1 RET   mmap 558301184/0x21470000
+  2800 ld-elf.so.1 CALL  mmap(0x21479000,0x1f000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 558338048/0x21479000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a79b,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libasn1.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x2126a79b,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libasn1.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404800, mode=0100444, nlink=1, uid=0, gid=0, rdev=914112, atime=1530912685.045893000, mtime=1526327317, ctime=1526904261.577343000, birthtime=1526327317, size=622488, blksize=32768, blocks=1280, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x99000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 558465024/0x21498000
+  2800 ld-elf.so.1 CALL  mmap(0x21498000,0x96000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 558465024/0x21498000
+  2800 ld-elf.so.1 CALL  mmap(0x2152e000,0x3000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x95000,0)
+  2800 ld-elf.so.1 RET   mmap 559079424/0x2152e000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a7a9,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libcom_err.so.5"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x2126a7a9,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libcom_err.so.5"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=405028, mode=0100444, nlink=1, uid=0, gid=0, rdev=927118, atime=1530912685.046022000, mtime=1526327270, ctime=1526904263.384569000, birthtime=1526327270, size=5372, blksize=32768, blocks=16, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x2000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559091712/0x21531000
+  2800 ld-elf.so.1 CALL  mmap(0x21531000,0x1000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559091712/0x21531000
+  2800 ld-elf.so.1 CALL  mmap(0x21532000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559095808/0x21532000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a7b9,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libcrypt.so.5"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=722362, mode=0100444, nlink=1, uid=0, gid=0, rdev=1456704, atime=1530912685.046150000, mtime=1526327183.862980000, ctime=1526904269.403081000, birthtime=1526327183.862980000, size=53692, blksize=32768, blocks=112, flags=0x20000 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x1f000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559099904/0x21533000
+  2800 ld-elf.so.1 CALL  mmap(0x21533000,0xd000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559099904/0x21533000
+  2800 ld-elf.so.1 CALL  mmap(0x21540000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0xc000,0)
+  2800 ld-elf.so.1 RET   mmap 559153152/0x21540000
+  2800 ld-elf.so.1 CALL  mmap(0x21541000,0x11000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559157248/0x21541000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a7d6,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libhx509.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x2126a7d6,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libhx509.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=405017, mode=0100444, nlink=1, uid=0, gid=0, rdev=932960, atime=1530912685.046296000, mtime=1526327317, ctime=1526904263.279735000, birthtime=1526327317, size=267080, blksize=32768, blocks=528, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x42000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559226880/0x21552000
+  2800 ld-elf.so.1 CALL  mmap(0x21552000,0x40000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559226880/0x21552000
+  2800 ld-elf.so.1 CALL  mmap(0x21592000,0x2000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x3f000,0)
+  2800 ld-elf.so.1 RET   mmap 559489024/0x21592000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a7f4,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libwind.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x2126a7f4,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libwind.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404820, mode=0100444, nlink=1, uid=0, gid=0, rdev=918352, atime=1530912685.046383000, mtime=1526327323, ctime=1526904261.932328000, birthtime=1526327323, size=159404, blksize=32768, blocks=312, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x28000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559497216/0x21594000
+  2800 ld-elf.so.1 CALL  mmap(0x21594000,0x27000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559497216/0x21594000
+  2800 ld-elf.so.1 CALL  mmap(0x215bb000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x26000,0)
+  2800 ld-elf.so.1 RET   mmap 559656960/0x215bb000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a802,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libheimbase.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x2126a802,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libheimbase.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404998, mode=0100444, nlink=1, uid=0, gid=0, rdev=929280, atime=1530912685.046507000, mtime=1526327323, ctime=1526904262.968830000, birthtime=1526327323, size=11012, blksize=32768, blocks=24, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x4000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559661056/0x215bc000
+  2800 ld-elf.so.1 CALL  mmap(0x215bc000,0x3000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559661056/0x215bc000
+  2800 ld-elf.so.1 CALL  mmap(0x215bf000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x2000,0)
+  2800 ld-elf.so.1 RET   mmap 559673344/0x215bf000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x2126a814,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libprivateheimipcc.so.11"
+  2800 ld-elf.so.1 RET   openat -1 errno 2 No such file or directory
+  2800 ld-elf.so.1 CALL  openat(0xb,0x2126a814,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libprivateheimipcc.so.11"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=404605, mode=0100444, nlink=1, uid=0, gid=0, rdev=891725, atime=1530912685.046600000, mtime=1526327323, ctime=1526904259.685821000, birthtime=1526327323, size=7508, blksize=32768, blocks=16, flags=0x0 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x3000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559677440/0x215c0000
+  2800 ld-elf.so.1 CALL  mmap(0x215c0000,0x2000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559677440/0x215c0000
+  2800 ld-elf.so.1 CALL  mmap(0x215c2000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x1000,0)
+  2800 ld-elf.so.1 RET   mmap 559685632/0x215c2000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  openat(0xa,0x215bc863,0x300000<O_RDONLY|O_CLOEXEC|O_VERIFY>)
+  2800 ld-elf.so.1 NAMI  "libthr.so.3"
+  2800 ld-elf.so.1 RET   openat 13/0xd
+  2800 ld-elf.so.1 CALL  fstat(0xd,0xffbfdcc0)
+  2800 ld-elf.so.1 STRU  struct stat {dev=77, ino=722336, mode=0100444, nlink=1, uid=0, gid=0, rdev=1455816, atime=1530914476.977693000, mtime=1526327276.390509000, ctime=1526904269.403065000, birthtime=1526327276.390509000, size=114296, blksize=32768, blocks=224, flags=0x20000 }
+  2800 ld-elf.so.1 RET   fstat 0
+  2800 ld-elf.so.1 CALL  fstatfs(0xd,0xffbfd398)
+  2800 ld-elf.so.1 RET   fstatfs 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x1<PROT_READ>,0x40002<MAP_PRIVATE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  mmap(0,0x25000,0<PROT_NONE>,0x2000<MAP_GUARD>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559689728/0x215c3000
+  2800 ld-elf.so.1 CALL  mmap(0x215c3000,0x1b000,0x5<PROT_READ|PROT_EXEC>,0x60012<MAP_PRIVATE|MAP_FIXED|MAP_NOCORE|MAP_PREFAULT_READ>,0xd,0,0)
+  2800 ld-elf.so.1 RET   mmap 559689728/0x215c3000
+  2800 ld-elf.so.1 CALL  mmap(0x215de000,0x1000,0x3<PROT_READ|PROT_WRITE>,0x40012<MAP_PRIVATE|MAP_FIXED|MAP_PREFAULT_READ>,0xd,0x1a000,0)
+  2800 ld-elf.so.1 RET   mmap 559800320/0x215de000
+  2800 ld-elf.so.1 CALL  mmap(0x215df000,0x9000,0x3<PROT_READ|PROT_WRITE>,0x1012<MAP_PRIVATE|MAP_FIXED|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559804416/0x215df000
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  close(0xd)
+  2800 ld-elf.so.1 RET   close 0
+  2800 ld-elf.so.1 CALL  sysarch(I386_SET_GSBASE,0xffbfe1ac)
+  2800 ld-elf.so.1 RET   sysarch 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0x101f0a0,0xffbfe180)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_SETMASK,0x101f0b4,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  __sysctl(0x214674e4,0x2,0x80668c0,0xffbfdd34,0,0)
+  2800 ld-elf.so.1 SCTL  "kern.arandom"
+  2800 ld-elf.so.1 RET   __sysctl 0
+  2800 ld-elf.so.1 CALL  readlink(0x21464b86,0xffbfd8ff,0x400)
+  2800 ld-elf.so.1 RET   readlink -1 errno 94 Not permitted in capability mode
+  2800 ld-elf.so.1 CALL  issetugid
+  2800 ld-elf.so.1 RET   issetugid 0
+  2800 ld-elf.so.1 CALL  __sysctl(0xffbfd858,0x2,0x2147db90,0xffbfd854,0,0)
+  2800 ld-elf.so.1 SCTL  "hw.pagesize"
+  2800 ld-elf.so.1 RET   __sysctl 0
+  2800 ld-elf.so.1 CALL  __sysctl(0xffbfd898,0x2,0xffbfd894,0xffbfd890,0,0)
+  2800 ld-elf.so.1 SCTL  "vm.overcommit"
+  2800 ld-elf.so.1 RET   __sysctl -1 errno 1 Operation not permitted
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0<PROT_NONE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  madvise(0x2103e000,0x1000,MADV_FREE)
+  2800 ld-elf.so.1 RET   madvise 0
+  2800 ld-elf.so.1 CALL  munmap(0x2103e000,0x1000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x200000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559841280/0x215e8000
+  2800 ld-elf.so.1 CALL  munmap(0x215e8000,0x200000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x3ff000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559841280/0x215e8000
+  2800 ld-elf.so.1 CALL  munmap(0x215e8000,0x18000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  munmap(0x21800000,0x1e7000)
+  2800 ld-elf.so.1 RET   munmap 0
+  2800 ld-elf.so.1 CALL  clock_gettime(0x4,0xffbfd828)
+  2800 ld-elf.so.1 RET   clock_gettime 0
+  2800 ld-elf.so.1 CALL  clock_gettime(0x4,0xffbfd828)
+  2800 ld-elf.so.1 RET   clock_gettime 0
+  2800 ld-elf.so.1 CALL  clock_gettime(0x4,0xffbfd848)
+  2800 ld-elf.so.1 RET   clock_gettime 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x7000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559841280/0x215e8000
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 553902080/0x2103e000
+  2800 ld-elf.so.1 CALL  __sysctl(0xffbfdce8,0x2,0xffbfdce0,0xffbfdce4,0,0)
+  2800 ld-elf.so.1 SCTL  "hw.ncpu"
+  2800 ld-elf.so.1 RET   __sysctl 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x5000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559869952/0x215ef000
+  2800 ld-elf.so.1 CALL  mmap(0,0x5000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559890432/0x215f4000
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0x101f0a0,0xffbfdd20)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_SETMASK,0x101f0b4,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0x101f0a0,0xffbfdd20)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_SETMASK,0x101f0b4,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0x101f0a0,0xffbfdd20)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_SETMASK,0x101f0b4,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0x101f0a0,0xffbfdd20)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_SETMASK,0x101f0b4,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  __sysctl(0xffbfdd00,0x2,0x215e79f4,0xffbfdcf4,0,0)
+  2800 ld-elf.so.1 SCTL  "kern.usrstack"
+  2800 ld-elf.so.1 RET   __sysctl 0
+  2800 ld-elf.so.1 CALL  getrlimit(RLIMIT_STACK,0xffbfdd08)
+  2800 ld-elf.so.1 RET   getrlimit 0
+  2800 ld-elf.so.1 CALL  __sysctl(0xffbfdc1c,0x2,0xffbfdc58,0xffbfdc54,0x215d9ee4,0xd)
+  2800 ld-elf.so.1 SCTL  "sysctl.name2oid"
+  2800 ld-elf.so.1 RET   __sysctl 0
+  2800 ld-elf.so.1 CALL  __sysctl(0xffbfdc58,0x3,0x215e6858,0xffbfdcf4,0,0)
+  2800 ld-elf.so.1 SCTL  "kern.smp.cpus"
+  2800 ld-elf.so.1 RET   __sysctl 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x3000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559910912/0x215f9000
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559923200/0x215fc000
+  2800 ld-elf.so.1 CALL  thr_self(0x215f9000)
+  2800 ld-elf.so.1 RET   thr_self 0
+  2800 ld-elf.so.1 CALL  mmap(0xfbbfe000,0x1000,0<PROT_NONE>,0x1000<MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap -71311360/0xfbbfe000
+  2800 ld-elf.so.1 CALL  rtprio_thread(RTP_LOOKUP,0x1873d,0xffbfdcc0)
+  2800 ld-elf.so.1 RET   rtprio_thread 0
+  2800 ld-elf.so.1 CALL  sysarch(I386_SET_GSBASE,0xffbfdcd8)
+  2800 ld-elf.so.1 RET   sysarch 0
+  2800 ld-elf.so.1 CALL  sigaction(SIGTHR,0xffbfdc70,0)
+  2800 ld-elf.so.1 RET   sigaction 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_UNBLOCK,0xffbfdc78,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  _umtx_op(0xffbfdc84,UMTX_OP_WAKE,0x1,0,0)
+  2800 ld-elf.so.1 RET   _umtx_op 0
+  2800 ld-elf.so.1 CALL  mprotect(0,0,0<PROT_NONE>)
+  2800 ld-elf.so.1 RET   mprotect 0
+  2800 ld-elf.so.1 CALL  getpid
+  2800 ld-elf.so.1 RET   getpid 2800/0xaf0
+  2800 ld-elf.so.1 CALL  getpid
+  2800 ld-elf.so.1 RET   getpid 2800/0xaf0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0x215d9c9c,0x215f90a0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_SETMASK,0x215f90a0,0)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 CALL  getcontext(0xffbfd780)
+  2800 ld-elf.so.1 RET   getcontext 0
+  2800 ld-elf.so.1 CALL  sysarch(I386_GET_XFPUSTATE,0xffbfd758)
+  2800 ld-elf.so.1 RET   sysarch 0
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559927296/0x215fd000
+  2800 ld-elf.so.1 CALL  mmap(0,0x1000,0x3<PROT_READ|PROT_WRITE>,0x1002<MAP_PRIVATE|MAP_ANON>,0xffffffff,0,0)
+  2800 ld-elf.so.1 RET   mmap 559931392/0x215fe000
+  2800 ld-elf.so.1 CALL  ioctl(0,TIOCGETA,0x8067640)
+  2800 ld-elf.so.1 RET   ioctl 0
+  2800 ld-elf.so.1 CALL  sigprocmask(SIG_BLOCK,0,0x8069034)
+  2800 ld-elf.so.1 RET   sigprocmask 0
+  2800 ld-elf.so.1 PSIG  SIGSEGV SIG_DFL code=SEGV_MAPERR
+  2800 ld-elf.so.1 CAP   restricted VFS lookup
