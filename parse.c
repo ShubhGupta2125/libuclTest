@@ -40,8 +40,8 @@ int main () {
     if (parser != NULL) {
             ucl_parser_free (parser);
     }
-    if (obj != NULL) {
+/*    if (obj != NULL) {
             ucl_object_unref (obj);
-    }
+    }*/
     return 0;
 }
