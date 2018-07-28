@@ -9,7 +9,7 @@ int main () {
     ucl_object_t *top = NULL;
     FILE *in;
 
-    in = stdin;
+    in = fopen("FreeBSD.conf");
     parser = ucl_parser_new (0);
     while (!feof (in) && r < (int)sizeof (inbuf)) {
             r += fread (inbuf + r, 1, sizeof (inbuf) - r, in);
