@@ -24,16 +24,17 @@ int main () {
             top = ucl_parser_get_object (parser);
     }
 
-    ucl_object_iter_t it = NULL, it_obj = NULL;
-    const ucl_object_t *cur, *obj;
+    ucl_object_iter_t it = NULL, it_obj = NULL, it_objj = NULL;
+    const ucl_object_t *cur, *obj, *objj
 
     /* Iterate over the object */
-    while ((obj = ucl_iterate_object (top, &it, true))) {
-            printf ("key: \"%s\"\n", ucl_object_key (obj));
+    while ((obj = ucl_iterate_object (top, &it, false))) {
                 /* Iterate over the values of a key */
                 while ((cur = ucl_iterate_object (obj, &it_obj, false))) {
-                            printf ("value: \"%s\"\n", 
-                                                ucl_object_tostring_forced (cur));
+                            printf ("key: \"%s\"\n", ucl_object_tostring_forced (cur));
+                            while ((objj = ucl_iterate_object (cur, &it_objj, false))) {
+                                    printf ("key: \"%s\"\n", ucl_object_tostring_forced (objj));
+                                    }
                                 }
     }
 
