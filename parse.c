@@ -28,13 +28,13 @@ int main () {
     const ucl_object_t *cur, *obj;
 
     /* Iterate over the object */
-    while ((obj = ucl_iterate_object (top, &it, false))) {
-        printf ("key: \"%s\"\n", ucl_object_key(obj));
-        printf ("value1: \"%s\"\n", ucl_object_tostring_forced(obj));
-                /* Iterate over the values of a key */
-                while ((cur = ucl_iterate_object (obj, &it_obj, false))) {
-                            printf ("value2: \"%s\"\n", ucl_object_tostring_forced (cur));
-                                }
+    while ((obj = ucl_iterate_object (top, &it, true))) {
+        //printf ("key: \"%s\"\n", ucl_object_key (obj));
+        /* Iterate over the values of a key */
+        while ((cur = ucl_iterate_object (obj, &it_obj, false))) {
+            printf ("key: \"%s\"\n", ucl_object_key (cur));
+            printf ("value: \"%s\"\n", ucl_object_key (cur));
+        }
     }
 
     if (parser != NULL) {
