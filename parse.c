@@ -1,5 +1,6 @@
 #include <ucl.h>
 #include<stdio.h>
+#include<stirng.h>
 
 int main () {
 
@@ -32,9 +33,11 @@ int main () {
         //printf ("key: \"%s\"\n", ucl_object_key (obj));
         /* Iterate over the values of a key */
         while ((cur = ucl_iterate_object (obj, &it_obj, false))) {
-            printf ("key: \"%s\"\n", ucl_object_key (cur));
+
+            if(strcmp(ucl_object_key(cur),"name")==0){
+           // printf ("key: \"%s\"\n", ucl_object_key (cur));
             printf ("value: \"%s\"\n", ucl_object_key (cur));
-        }
+        }}
     }
 
     if (parser != NULL) {
